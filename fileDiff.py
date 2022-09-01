@@ -15,6 +15,8 @@ session = requests.Session()
 mainURL = "https://ccweb6.ncnu.edu.tw"
 courses = []
 
+requests.packages.urllib3.disable_warnings()
+
 def parseCsv(csvData):
     ans = {}
     courses = csvData.split('"\r\n')[1:-1]
