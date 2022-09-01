@@ -103,6 +103,7 @@ if __name__ == "__main__":
     bot.prevAns = curlDepartmentCourseTable(YEAR, 'html')
     bot.start_polling()
 
+    response = session.get('{}/student/aspmaker_course_opened_detail_viewlist.php?cmd=resetall'.format(mainURL))
     while True:
         try:
             newAns = curlDepartmentCourseTable(YEAR, 'html')
